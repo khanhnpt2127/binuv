@@ -105,43 +105,55 @@
   </header>
 
   <!-- About Section -->
-  <section class="page-section" id="about">
-    <div class="container">
+  <section class="page-section bg-default text-black mb-0" id="about">
+      <div class="container">
 
-      <!-- About Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase">About</h2>
+          <!-- About Section Heading -->
+          <h2 class="page-section-heading text-center text-uppercase text-black">About</h2>
 
-      <!-- Icon Divider -->
-      <div class="divider-custom divider-dark">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-icicles"></i>
-        </div>
-        <div class="divider-custom-line"></div>
+          <!-- Icon Divider -->
+          <!-- Icon Divider -->
+          <div class="divider-custom divider-dark">
+              <div class="divider-custom-line"></div>
+              <div class="divider-custom-icon">
+                  <i class="fas fa-icicles"></i>
+              </div>
+              <div class="divider-custom-line"></div>
+          </div>
+
+          <!-- About Section Content -->
+          <div class="row">
+              <div class="row text-center" >
+                  <div class="col-lg-12 ml-auto">
+                      <p class="lead">
+                          A startup company based in Chemnitz, formed by a group of people having a same aim to build strong connections between people and mass media with the help of cutting edge technology.
+                      </p>
+                      <br />
+                  </div>
+              </div>
+              <div class="col-lg-4 ml-auto">
+                  <h4 class="text-center"> <i class="far fa-eye fa-3x"></i></h4>
+                  <p class="lead text-center">
+                      To become world's leading company that innovates and strengthens connections between people and mass media with cutting-edge technologies.
+                  </p>
+              </div>
+              <div class="col-lg-4 mr-auto">
+                  <h4 class="text-center"><i class="fas fa-rocket fa-3x"></i></h4>
+                  <p class="lead text-center">
+                      Our mission is to achieve strong connection between people and mass media by unlocking the potential of human creativity on technologies.
+                  </p>
+              </div>
+              <div class="col-lg-4 ml-auto">
+                  <h4 class="text-center"><i class="fas fa-crosshairs fa-3x"></i> </h4>
+                  <p class="lead text-center" >
+                      Our purpose is to improve relationship between human and mass media by bringing up the new methods and approaches.          </p>
+              </div>
+          </div>
+
+          <!-- About Section Button -->
+
+
       </div>
-
-      <!-- About Section Content -->
-      <div class="row">
-        <div class="col-lg-4 ml-auto">
-          <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the
-            complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy
-            customization.</p>
-        </div>
-        <div class="col-lg-4 mr-auto">
-          <p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and
-            add your email address to the contact form to make it fully functional!</p>
-        </div>
-      </div>
-
-      <!-- About Section Button -->
-      <div class="text-center mt-4">
-        <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/themes/freelancer/">
-          <i class="fas fa-download mr-2"></i>
-          Free Download!
-        </a>
-      </div>
-
-    </div>
   </section>
 
   <!-- Team Section -->
@@ -245,7 +257,10 @@
               </div>
             </div>
             <br>
-            <div id="success"></div>
+            <div id="success">
+
+            </div>
+              <br />
             <div class="form-group">
               <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
             </div>
@@ -846,6 +861,21 @@
     $(window).on('load', function () {
       $('#disclaimerModal').modal('show');
     });
+  </script>
+  <script>
+      $("#sendMessageButton").click(function(){
+          if($("#name").val()=='' || $("#email").val()=='' ||$("#phone").val()=='' ||$("#message").val()=='' ){
+              $('#success > .alert-danger').append($("<strong>").text("Hi " + $("#name").val() + ", Please fill out all the fields. Thank You!"));
+          }else{
+              // $('#success').show();
+              alert('You will be redirected to your email client please click send there! Thank You');
+              // $('#success > .alert-success').append($("<strong>").text("Hi " + $("#name").val() + ", You have been redirected to your email client please click send there! Thank You"));
+              var body = "Name:"+$("#name").val()+"Email:"+$("#email").val()+"Phone:"+$("#phone").val()+"Message:"+$("#message").val();
+              window.open('mailto:info@binuv.com?subject="New Msg For BINUV"&body='+body);
+
+          }
+
+      })
   </script>
 
 </body>
