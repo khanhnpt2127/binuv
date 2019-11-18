@@ -10,7 +10,7 @@
   <meta name="disclaimer"
     content="This website does not belong to a real company. It is a Planspiel Web Engineering project under Technische Universität Chemnitz, Germany.">
 
-  <title>BINUV - A StartUp under VSR, TU Chemnitz</title>
+  <title>BINUV - A Start-up company under VSR, TU Chemnitz</title>
 
   <!-- Favicon icon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -913,8 +913,58 @@
   </script>
 
   <script>
+
+  function createCookie(cookieName) {
+    var daysToExpire = 30;
+    var date = new Date();
+    date.setTime(date.getTime() + (daysToExpire * 24 * 60 * 60 * 1000));
+    var cookieValues = cookieName + "=visitor" +";";
+    // cookieValues += "Domain=binuv.com;";
+    // cookieValues += "Path=\\";
+    // cookieValues += "Secure;";
+    cookieValues += "expires=" + date.toGMTString() + ";";
+    document.cookie = cookieValues;
+
+  }
+
+  function accessCookie(cookieName) {
+    
+    var name = cookieName + "=";
+    var ca = document.cookie.split(';');
+
+    for(var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  function newVisitor() {
+    var cookieName = "username";
+    var user = accessCookie(cookieName);
+    if (user == "") {
+      createCookie(cookieName);
+      return true;
+    } else {
+      return false;
+    }
+  }
+  if (true) {
+
+  }
+
     $(window).on('load', function () {
-      $('#disclaimerModal').modal('show');
+      $newVisiting = newVisitor();
+
+      if ($newVisiting){
+        $('#disclaimerModal').modal('show');
+      }
+
     });
   </script>
   <script>
