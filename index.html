@@ -39,6 +39,92 @@
       opacity: 0.5 !important;
       cursor: pointer !important;
     }
+    .container-fluid {
+      padding-top: 50px;
+      padding-bottom: 80px;
+      /*background-color: #000000;*/
+      color: #ffffff
+    }
+
+    #heading {
+      font-size: 40px;
+      margin-top: 40px;
+      font-weight: normal;
+      font-family: Century Gothic
+    }
+
+    .line {
+      background-color: #ffffff;
+      border-radius: 50px;
+      border: none;
+      padding: 2px;
+      height: 4px;
+      width: 100px;
+      margin-top: 5px
+    }
+
+    .vertical-center {
+      margin: 0;
+      position: absolute;
+      top: 45%;
+      -ms-transform: translateY(-45%);
+      transform: translateY(-45%)
+    }
+
+    @media (max-width: 768px) {
+      .vertical-center {
+        margin: 0;
+        position: relative;
+        top: 0;
+        -ms-transform: translateY(0);
+        transform: translateY(0)
+      }
+    }
+
+    .gap {
+      height: 130px
+    }
+
+    @media (max-width: 768px) {
+      .gap {
+        height: 0
+      }
+    }
+
+    .teamImageDiv {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto
+    }
+
+    .teamImageDiv img:hover {
+      opacity: 0.5 !important;
+      cursor: pointer !important;
+    }
+    /*img {*/
+      /*width: 150px;*/
+      /*height: 150px;*/
+      /*border-radius: 50%*/
+    /*}*/
+    .team-img{
+      width: 150px;
+      height: 150px;
+      border-radius: 50%
+    }
+
+    .team-img :hover{
+      cursor: pointer;
+    }
+
+    .image-name {
+      font-weight: bold
+    }
+
+    .fit-image {
+      width: 100%;
+      object-fit: cover
+    }
   </style>
 </head>
 
@@ -178,7 +264,67 @@
   </section>
 
   <!-- Team Section -->
-  <section class="page-section bg-primary text-white mb-0" id="team">
+  <!--<section class="page-section bg-primary text-white mb-0" id="team">-->
+    <!--<div class="container">-->
+
+      <!--&lt;!&ndash; Team Section Heading &ndash;&gt;-->
+      <!--<h2 class="page-section-heading text-center text-uppercase text-white">The Team</h2>-->
+
+      <!--&lt;!&ndash; Icon Divider &ndash;&gt;-->
+      <!--<div class="divider-custom divider-light">-->
+        <!--<div class="divider-custom-line"></div>-->
+        <!--<div class="divider-custom-icon">-->
+          <!--<i class="fas fa-icicles"></i>-->
+        <!--</div>-->
+        <!--<div class="divider-custom-line"></div>-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash; Team Section Content &ndash;&gt;-->
+      <!--<div>-->
+
+      <!--</div>-->
+      <!--<div class="team mt-lg-5">-->
+        <!--<div class="owl-carousel owl-theme">-->
+          <!--<div class="item" title="Please, click to see more information">-->
+            <!--<div class="portfolio-item mx-auto" data-toggle="modal" data-target="#teamModal1">-->
+              <!--<img alt="Khanh Nguyen Pham Tuan" class="rounded-circle" src="img/team/tk.jpg" />-->
+              <!--<h5 class="text-center pt-3">KHANH NGUYEN PHAM TUAN</h5>-->
+              <!--<h6 class="text-center pt-1">CSO</h6>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="item" title="Please, click to see more information">-->
+            <!--<div class="portfolio-item mx-auto" data-toggle="modal" data-target="#teamModal2">-->
+              <!--<img alt="Doston Hamrakulov" class="rounded-circle" src="img/team/doston.jpg" />-->
+              <!--<h5 class="text-center pt-3">DOSTON HAMRAKULOV</h5>-->
+              <!--<h6 class="text-center pt-1">CEO</h6>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="item" title="Please, click to see more information">-->
+            <!--<div class="portfolio-item mx-auto" data-toggle="modal" data-target="#teamModal3">-->
+              <!--<img alt="Yamini Gupta" class="rounded-circle" src="img/team/yamini.jpeg" />-->
+              <!--<h5 class="text-center pt-3">YAMINI GUPTA</h5>-->
+              <!--<h6 class="text-center pt-1">CMO</h6>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="item" title="Please, click to see more information">-->
+            <!--<div class="portfolio-item mx-auto" data-toggle="modal" data-target="#teamModal4">-->
+              <!--<img alt="Sagar Kafle" class="rounded-circle" src="img/team/sagar.jpg" /></div>-->
+            <!--<h5 class="text-center pt-3">SAGAR KAFLE</h5>-->
+            <!--<h6 class="text-center pt-1">CFO</h6>-->
+          <!--</div>-->
+          <!--<div class="item" title="Please, click to see more information">-->
+            <!--<div class="portfolio-item mx-auto" data-toggle="modal" data-target="#teamModal5">-->
+              <!--<img alt="Shovra Das" class="rounded-circle" src="img/team/shovra.jpg" /></div>-->
+            <!--<h5 class="text-center pt-3">SHOVRA DAS</h5>-->
+            <!--<h6 class="text-center pt-1">CTO</h6>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</section>-->
+
+  <!--Additional Team Section -->
+  <section class="page-section bg-primary text-white mb-0" id="teamNew">
     <div class="container">
 
       <!-- Team Section Heading -->
@@ -196,41 +342,55 @@
       <!-- Team Section Content -->
       <div>
 
+
       </div>
-      <div class="team mt-lg-5">
-        <div class="owl-carousel owl-theme">
-          <div class="item" title="Please, click to see more information">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#teamModal1">
-              <img alt="Khanh Nguyen Pham Tuan" class="rounded-circle" src="img/team/tk.jpg" />
-              <h5 class="text-center pt-3">KHANH NGUYEN PHAM TUAN</h5>
-              <h6 class="text-center pt-1">CSO</h6>
+      <div class="container-fluid px-5 mx-auto">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="teamImageDiv" data-toggle="modal" data-target="#teamModal1"><img  alt="Khanh Nguyen Pham Tuan" src="img/team/tk.jpg" class="fit-image team-img"></div>
+                <p class="mt-2 text-center image-name">KHANH NGUYEN PHAM TUAN (CSO)</p>
+              </div>
+              <div class="col-md-4"></div>
+            </div>
+            <div class="row">
+              <div class="gap"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-8">
+                <div class="teamImageDiv bottom-image" data-toggle="modal" data-target="#teamModal4"><img alt="Sagar Kafle" src="img/team/sagar.jpg"  class="fit-image team-img"></div>
+                <p class="mt-2 text-center image-name">SAGAR KAFLE(CFO)</p>
+              </div>
             </div>
           </div>
-          <div class="item" title="Please, click to see more information">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#teamModal2">
-              <img alt="Doston Hamrakulov" class="rounded-circle" src="img/team/doston.jpg" />
-              <h5 class="text-center pt-3">DOSTON HAMRAKULOV</h5>
-              <h6 class="text-center pt-1">CEO</h6>
+          <div class="col-md-4">
+            <div class="row justify-content-center">
+              <div class="col-md-8 vertical-center">
+                <div class="teamImageDiv" data-toggle="modal" data-target="#teamModal2"><img alt="Doston Hamrakulov" src="img/team/doston.jpg"  class="fit-image team-img"></div>
+                <p class="mt-2 text-center image-name">DOSTON HAMRAKULOV(CEO)</p>
+              </div>
             </div>
           </div>
-          <div class="item" title="Please, click to see more information">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#teamModal3">
-              <img alt="Yamini Gupta" class="rounded-circle" src="img/team/yamini.jpeg" />
-              <h5 class="text-center pt-3">YAMINI GUPTA</h5>
-              <h6 class="text-center pt-1">CMO</h6>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-8">
+                <div class="teamImageDiv" data-toggle="modal" data-target="#teamModal3"><img src="img/team/yamini.jpeg" class="fit-image team-img"></div>
+                <p class="mt-2 text-center image-name">YAMINI GUPTA(CMO)</p>
+              </div>
             </div>
-          </div>
-          <div class="item" title="Please, click to see more information">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#teamModal4">
-              <img alt="Sagar Kafle" class="rounded-circle" src="img/team/sagar.jpg" /></div>
-            <h5 class="text-center pt-3">SAGAR KAFLE</h5>
-            <h6 class="text-center pt-1">CFO</h6>
-          </div>
-          <div class="item" title="Please, click to see more information">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#teamModal5">
-              <img alt="Shovra Das" class="rounded-circle" src="img/team/shovra.jpg" /></div>
-            <h5 class="text-center pt-3">SHOVRA DAS</h5>
-            <h6 class="text-center pt-1">CTO</h6>
+            <div class="row">
+              <div class="gap"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="teamImageDiv bottom-image" data-toggle="modal" data-target="#teamModal4"><img  alt="Shovra Das" src="img/team/shovra.jpg" class="fit-image team-img"></div>
+                <p class="mt-2 text-center image-name">SHOVRA DAS (CTO)</p>
+              </div>
+              <div class="col-md-4"></div>
+            </div>
           </div>
         </div>
       </div>
